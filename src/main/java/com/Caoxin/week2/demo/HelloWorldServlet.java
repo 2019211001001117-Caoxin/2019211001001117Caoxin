@@ -6,8 +6,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-//now its just a java class
-//extend HttpServlet
+
 public class HelloWorldServlet extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -17,7 +16,8 @@ public class HelloWorldServlet extends HttpServlet {
         //we need to write Hello in response
         // get write - java .io
         PrintWriter writer = response.getWriter();
-        writer.println("Hello Client !!!");//that all
+        writer.println("Name :Caoxin\n"+
+                "ID:2019211001001117");
         //next we need to tell about this servlet to tomcat - how ? - web.xml
 
     }
