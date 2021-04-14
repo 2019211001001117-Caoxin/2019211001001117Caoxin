@@ -8,7 +8,15 @@
 <%@include file="header.jsp"%>
 
 <h1>Welcome to my home page!</h1> <br/>
-
+<form method="get" action="SearchServlet">
+    <input type="text" name="txt" size="30"/>
+    <select name="search">
+        <option value="google">Google</option>
+        <option value="bing">Bing</option>
+        <option value="baidu">Baidu</option>
+    </select>
+    <input type="submit" value="Search"/>
+</form>
 <br/>
 
 <a href="hello-servlet">Hellow Servlet-week1</a><br/>

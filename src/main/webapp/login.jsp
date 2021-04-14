@@ -11,6 +11,13 @@
     <title>login</title>
 </head>
 <%@include file="header.jsp"%>
+
+<h1>Login</h1>
+<%
+    if(!(request.getAttribute("message")==null)){
+        out.println(request.getAttribute("message"));}
+%>
+<%@include file="header.jsp"%>
 <form method="post" action="login">
     UserName:<input type="text" name="username"><br/>
     Password:<input type="text" name="password"><br/>
