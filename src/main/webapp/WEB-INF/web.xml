@@ -117,7 +117,11 @@
         <param-name>password</param-name>
         <param-value>admin123456789</param-value>
     </context-param>
-<!--<servlet>-->
+    <servlet>
+        <servlet-name>HomeServlet</servlet-name>
+        <servlet-class>com.Caoxin.controller.HomeServlet</servlet-class>
+    </servlet>
+    <!--<servlet>-->
 <!--    <servlet-name>SearchServlet</servlet-name>-->
 <!--    <servlet-class>com.Caoxin.week6.Demo.SearchServlet</servlet-class>-->
 <!--</servlet>-->
@@ -129,4 +133,7 @@
 <!--        <servlet-name>RedirectServlet</servlet-name>-->
 <!--        <servlet-class>com.Caoxin.week6.Demo.RedirectServlet</servlet-class>-->
 <!--    </servlet>-->
+    <welcome-file-list>
+        <welcome-file>home</welcome-file>
+    </welcome-file-list>
 </web-app>
