@@ -9,7 +9,7 @@
 
 <form method="post" action="register"><!-- whthin doPost() in Servlet-->
     username<input type="text" name="username"/><br/>
-    password<input type="password" name="email"><br/>
+    password<input type="password" name="password"><br/>
     Email<input type="text" name="email"/><br/>
     Gender:<input type="radio" name="gender" value="Male">Male <input type="radio" name="gender" value="Female">Female<br/>
     <!-- if name is same it makes array-->

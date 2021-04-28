@@ -52,19 +52,19 @@ public class RegisterServlet extends HttpServlet {
         int resultSet;
         String Id=request.getParameter("id");
         String Username=request.getParameter("username");
-        String Email=request.getParameter("email");
         String Password=request.getParameter("password");
+        String Email=request.getParameter("email");
         String Gender=request.getParameter("gender");
-        String Birthdate=request.getParameter("birthDate");
+        String Birthdate=request.getParameter("birthdate");
         String sql ="insert into usertable(id,username,password,email,gender,birthdate) values(?,?,?,?,?,?)";
         try {
             ps = con.prepareStatement(sql);
             ps.setString(1,Id);
             ps.setString(2,Username);
-            ps.setString(3,Email);
-            ps.setString(4,Gender);
-            ps.setString(5,Birthdate);
-            ps.setString(6,Password);
+            ps.setString(3,Password);
+            ps.setString(4,Email);
+            ps.setString(5,Gender);
+            ps.setString(6,Birthdate);
             resultSet = ps.executeUpdate();
 
 

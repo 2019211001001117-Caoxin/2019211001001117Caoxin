@@ -17,10 +17,10 @@
     if(!(request.getAttribute("message")==null)){
         out.println(request.getAttribute("message"));}
 %>
-<%@include file="header.jsp"%>
+
 <form method="post" action="login">
     UserName:<input type="text" name="username"><br/>
-    Password:<input type="text" name="password"><br/>
+    Password:<input type="password" name="password"><br/>
     <input type="submit" value="submit">
 </form>
 <%@include file="footer.jsp"%>

@@ -57,7 +57,25 @@ public class LoginServlet extends HttpServlet {
             try {
                 User user = userDao.findByUsernamePassword(con, username, password);
                 if (user != null) {
-                    request.setAttribute("user", user);
+                    String rememberMe=request.getParameter("rememberMe");
+                    if(rememberMe!=null && rememberMe.equals("1")){
+                        Cookie usernameCookies=new Cookie("cUsername",user.getUsername());
+                        Cookie passwordCookies=new Cookie("cPassword",user.getPassword());
+                        Cookie rememberMeCookies=new Cookie("cRememberMe",rememberMe);
+
+                        usernameCookies.setMaxAge(5);
+                        passwordCookies.setMaxAge(5);
+                        rememberMeCookies.setMaxAge(5);
+
+                        response.addCookie(usernameCookies);
+                        response.addCookie(passwordCookies);
+                        response.addCookie(rememberMeCookies);
+                    }
+
+                    HttpSession session=request.getSession();
+                    System.out.println("session id-->"+session.getId());
+                    session.setMaxInactiveInterval(10);
+                    session.setAttribute("user", user);
                     request.getRequestDispatcher("WEB-INF/views/userInfo.jsp").forward(request, response);
                 } else {
                     request.setAttribute("message", "Usename or Password Error!!!");

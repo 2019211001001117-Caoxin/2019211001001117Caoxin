@@ -1,6 +1,6 @@
 package com.Caoxin.model;
 
-import java.util.Date;
+import java.sql.Date;
 
 public class User {
     private int id;
@@ -8,7 +8,7 @@ public class User {
     private String password;
     private String email;
     private String gender;
-    private java.util.Date birthdate;
+    private java.sql.Date birthdate;
 
     public User() {
     }
@@ -20,6 +20,9 @@ public class User {
         this.email = email;
         this.gender = gender;
         this.birthdate = birthdate;
+    }
+
+    public User(int id, String username, String password, String email, String gender, String birthdate) {
     }
 
     public int getId() {
@@ -78,7 +81,7 @@ public class User {
                 ", password='" + password + '\'' +
                 ", email='" + email + '\'' +
                 ", gender='" + gender + '\'' +
-                ", birthday=" + birthdate +
+                ", birthdate=" + birthdate +
                 '}';
     }
 }

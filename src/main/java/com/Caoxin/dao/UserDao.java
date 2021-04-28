@@ -7,7 +7,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Date;
+import java.sql.Date;
 import java.util.List;
 
 public class UserDao implements IUserDao{
@@ -20,7 +20,7 @@ public class UserDao implements IUserDao{
         pstmt.setString(3,user.getPassword());
         pstmt.setString(4,user.getEmail());
         pstmt.setString(5,user.getGender());
-        pstmt.setDate(6, (java.sql.Date) user.getBirthDate());
+        pstmt.setDate(6, user.getBirthDate());
 
         int rs = pstmt.executeUpdate();
         if(rs==1) return true;
@@ -44,7 +44,7 @@ public class UserDao implements IUserDao{
         pstmt.setString(2,user.getPassword());
         pstmt.setString(3,user.getEmail());
         pstmt.setString(4,user.getGender());
-        pstmt.setDate(5, (java.sql.Date) user.getBirthDate());
+        pstmt.setDate(5,user.getBirthDate());
         pstmt.setInt(6,user.getId());
 
         int rs = pstmt.executeUpdate();
@@ -175,12 +175,12 @@ public class UserDao implements IUserDao{
     }
 
     @Override
-    public List<User> findByBirthdate(Connection con, Date birthDate) throws SQLException {
+    public List<User> findByBirthdate(Connection con, Date birthdate) throws SQLException {
         List<User> userList=new ArrayList<User>();
 
         String sql="select * from usertable where birthdate=?";
         PreparedStatement ps=con.prepareStatement(sql);
-        ps.setDate(1, (java.sql.Date) birthDate);
+        ps.setDate(1,birthdate);
         ResultSet rs=ps.executeQuery();
         User user=new User();
         while(rs.next()) {

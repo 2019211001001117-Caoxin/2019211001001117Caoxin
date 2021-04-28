@@ -118,9 +118,22 @@
         <param-value>admin123456789</param-value>
     </context-param>
     <servlet>
-        <servlet-name>HomeServlet</servlet-name>
-        <servlet-class>com.Caoxin.controller.HomeServlet</servlet-class>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>com.Caoxin.controller.LogoutServlet</servlet-class>
     </servlet>
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>UpdateUserServlet</servlet-name>
+        <servlet-class>com.Caoxin.controller.UpdateUserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdateUserServlet</servlet-name>
+        <url-pattern>/updateUser</url-pattern>
+    </servlet-mapping>
+
     <!--<servlet>-->
 <!--    <servlet-name>SearchServlet</servlet-name>-->
 <!--    <servlet-class>com.Caoxin.week6.Demo.SearchServlet</servlet-class>-->
