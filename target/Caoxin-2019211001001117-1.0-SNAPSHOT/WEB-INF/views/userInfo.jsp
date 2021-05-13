@@ -1,40 +1,37 @@
-<%@ page import="com.Caoxin.model.User" %><%--
+<%--
   Created by IntelliJ IDEA.
   User: CAOX
-  Date: 2021/4/14
-  Time: 22:38
+  Date: 2021/5/9
+  Time: 17:21
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="com.Caoxin.model.User" %>
 <%@include file="header.jsp"%>
-<h1>User Info</h1>
 <%
-    User u=(User) session.getAttribute("user");
+    User u= (User) session.getAttribute("user");
 %>
-<table >
+
+<h1>User Info</h1>
+
+<table border="1">
     <tr>
-        <td>Username:</td>
-    </tr><tr>
-    <td><%=u.getUsername()%></td></tr>
-    <tr>
-        <td>Password:</td>
+        <th>Username</th>
+        <th>Password</th>
+        <th>Email</th>
+        <th>Gender</th>
+        <th>Birthdate</th>
     </tr>
     <tr>
+        <td><%=u.getUsername()%></td>
         <td><%=u.getPassword()%></td>
+        <td><%=u.getEmail()%></td>
+        <td><%=u.getGender()%></td>
+        <td><%=u.getBirthDate()%></td>
     </tr>
-    <tr>
-        <td>Email:</td></tr>
-    <tr>
-        <td><%=u.getEmail()%></td></tr>
-    <tr>
-        <td>Gender:</td>
-    </tr>
-    <tr>
-        <td><%=u.getGender()%></td></tr>
-    <tr>
-        <td>Birth Date:</td></tr>
-    <tr><td><%=u.getBirthDate()%></td>
-    </tr>
+
 </table>
-<a href="updateUser">Update</a>
+
+<a href="updateUser">Update User</a>
+
 <%@include file="footer.jsp"%>

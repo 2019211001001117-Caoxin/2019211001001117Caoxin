@@ -1,13 +1,11 @@
 package com.Caoxin.week3.demo;
 
 import javax.servlet.*;
-import javax.servlet.annotation.WebInitParam;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.io.Writer;
 import java.sql.*;
+
 
 //automatic -new --> servlet
 //@WebServlet(
@@ -41,7 +39,7 @@ public class RegisterServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    doPost(request,response);
+        request.getRequestDispatcher("WEB-INF/views/register.jsp").forward(request,response);
     }
 
 
@@ -50,7 +48,8 @@ public class RegisterServlet extends HttpServlet {
 
         PreparedStatement ps = null;
         int resultSet;
-        String Id=request.getParameter("id");
+        int Id = Integer.parseInt(request.getParameter("id"));
+//        String Id=request.getParameter("id");
         String Username=request.getParameter("username");
         String Password=request.getParameter("password");
         String Email=request.getParameter("email");
@@ -59,7 +58,7 @@ public class RegisterServlet extends HttpServlet {
         String sql ="insert into usertable(id,username,password,email,gender,birthdate) values(?,?,?,?,?,?)";
         try {
             ps = con.prepareStatement(sql);
-            ps.setString(1,Id);
+            ps.setInt(1,Id);
             ps.setString(2,Username);
             ps.setString(3,Password);
             ps.setString(4,Email);

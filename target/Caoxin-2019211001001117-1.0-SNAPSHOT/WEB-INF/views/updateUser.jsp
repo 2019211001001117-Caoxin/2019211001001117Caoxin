@@ -1,26 +1,50 @@
 <%--
   Created by IntelliJ IDEA.
   User: CAOX
-  Date: 2021/4/28
-  Time: 15:41
+  Date: 2021/5/9
+  Time: 17:23
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ include file="header.jsp"%>
-<h1>User Update</h1>
+<%@include file="header.jsp"%>
+<%@ page import="com.Caoxin.model.User" %>
 <%
     User u= (User) session.getAttribute("user");
 %>
-<form method="post" action="updateUser"><!-- whthin doPost() in Servlet-->
-    <input type="hidden" name="id" value="<%=u.getId()%>">
-    username<input type="text" name="username" value="<%=u.getUsername()%>"/><br/>
-    password<input type="password" name="password" value="<%=u.getPassword()%>"/><br/>
-    Email<input type="text" name="email" value="<%=u.getEmail()%>"/><br/>
-    Gender:<input type="radio" name="gender" value="Male" <%="Male".equals(u.getGender())?"checked" :""%>>Male
-    <input type="radio" name="gender" value="Female" <%="Female".equals(u.getGender())?"checked" :""%>>Female<br/>
-    <!-- if name is same it makes array-->
-    Date of Birth :<input type="text" name="birthdate" value="<%=u.getBirthDate()%>"><br/>
-    <input type="submit" value="Save Changes"/>
 
+<form  id="updateUserForm" method="post" action="updateUser">
+    <fieldset>
+        <legend>Update Info</legend>
+
+        <p>
+            <input type="hidden" name="id" value="<%=u.getId()%>">
+            <label for="username">username</label>
+            <input id="username" name="username" type="text" value="<%=u.getUsername()%>">
+        </p>
+        <p>
+            <label>gender</label>
+            <input id="gender_m" name="gender" value="boy" type="radio" <%="boy".equals(u.getGender())?"checked":""%>>boy
+            <input id="gender_f" name="gender" value="girl" type="radio" <%="girl".equals(u.getGender())?"checked":""%>>girl
+
+        </p>
+        <p>
+            <label for="password">password</label>
+            <input id="password" name="password" type="password" value="<%=u.getPassword()%>">
+        </p>
+        <p>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" value="<%=u.getEmail()%>">
+        </p>
+        <p>
+            <label for="birthdate">Birthdate</label>
+            <input id="birthdate" name="birthdate" type="text" value="<%=u.getBirthDate()%>">
+        </p>
+
+        <p>
+            <input class="submit" type="submit" value="Save Changes">
+        </p>
+    </fieldset>
 </form>
-<%@ include file="footer.jsp"%>
+
+
+<%@include file="footer.jsp"%>
