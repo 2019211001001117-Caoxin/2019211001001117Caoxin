@@ -129,6 +129,16 @@
         <servlet-name>UpdateUserServlet</servlet-name>
         <servlet-class>com.Caoxin.controller.UpdateUserServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ProductListServlet</servlet-name>
+        <servlet-class>com.Caoxin.controller.ProductListServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>AddProductServlet</servlet-name>
+        <servlet-class>com.Caoxin.controller.AddProductServlet</servlet-class>
+    </servlet>
+
     <servlet-mapping>
         <servlet-name>UpdateUserServlet</servlet-name>
         <url-pattern>/updateUser</url-pattern>
