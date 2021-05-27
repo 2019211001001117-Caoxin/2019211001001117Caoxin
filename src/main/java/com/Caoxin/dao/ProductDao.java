@@ -176,7 +176,7 @@ public class ProductDao implements  IProductDao{
         ResultSet rs = pt.executeQuery();
         while (rs.next()) {
             Blob blob = rs.getBlob("picture");
-            imgByte = ((Blob) blob).getBytes(1, (int) blob.length());
+            imgByte =  blob.getBytes(1, (int) blob.length());
         }
         return imgByte;
     }
