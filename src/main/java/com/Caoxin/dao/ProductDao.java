@@ -67,7 +67,6 @@ public class ProductDao implements  IProductDao{
             product.setProductId(rs.getInt("productId"));
             product.setProductName(rs.getString("productName"));
             product.setProductDescription(rs.getString("productDescription"));
-            product.setPicture((InputStream) rs.getBlob("picture"));
             product.setPrice(rs.getDouble("price"));
             product.setCategoryId(rs.getInt("categoryId"));
         }
@@ -86,7 +85,6 @@ public class ProductDao implements  IProductDao{
             product.setProductId(rs.getInt("productId"));
             product.setProductName(rs.getString("productName"));
             product.setProductDescription(rs.getString("productDescription"));
-            product.setPicture((InputStream) rs.getBlob("picture"));
             product.setPrice(rs.getDouble("price"));
             product.setCategoryId(rs.getInt("categoryId"));
             productList.add(product);
@@ -108,7 +106,6 @@ public class ProductDao implements  IProductDao{
             product.setProductId(rs.getInt("productId"));
             product.setProductName(rs.getString("productName"));
             product.setProductDescription(rs.getString("productDescription"));
-            product.setPicture((InputStream) rs.getBlob("picture"));
             product.setPrice(rs.getDouble("price"));
             product.setCategoryId(rs.getInt("categoryId"));
             productList.add(product);
@@ -127,7 +124,6 @@ public class ProductDao implements  IProductDao{
             product.setProductId(rs.getInt("productId"));
             product.setProductName(rs.getString("productName"));
             product.setProductDescription(rs.getString("productDescription"));
-            product.setPicture((InputStream) rs.getBlob("picture"));
             product.setPrice(rs.getDouble("price"));
             product.setCategoryId(rs.getInt("categoryId"));
             productList.add(product);
@@ -147,7 +143,6 @@ public class ProductDao implements  IProductDao{
             product.setProductId(rs.getInt("productId"));
             product.setProductName(rs.getString("productName"));
             product.setProductDescription(rs.getString("productDescription"));
-            product.setPicture((InputStream) rs.getBlob("picture"));
             product.setPrice(rs.getDouble("price"));
             product.setCategoryId(rs.getInt("categoryId"));
             productList.add(product);

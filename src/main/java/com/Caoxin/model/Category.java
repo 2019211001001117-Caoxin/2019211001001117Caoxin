@@ -92,7 +92,7 @@ public class Category {
 
     public static String findByCategoryId(int categoryId,Connection con) throws SQLException {
         String categoryName=null;
-        String sql = "select CategoryName from Category where CategoryId=?";
+        String sql = "select * from Category where categoryId=?";
         PreparedStatement ps = con.prepareStatement(sql);
         ps.setInt(1, categoryId);
         ResultSet rs = ps.executeQuery();

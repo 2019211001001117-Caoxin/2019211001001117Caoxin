@@ -138,6 +138,18 @@
         <servlet-name>AddProductServlet</servlet-name>
         <servlet-class>com.Caoxin.controller.AddProductServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>GetImgServlet</servlet-name>
+        <servlet-class>com.Caoxin.controller.GetImgServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ShopServlet</servlet-name>
+        <servlet-class>com.Caoxin.controller.ShopServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ProductDetailsServlet</servlet-name>
+        <servlet-class>com.Caoxin.controller.ProductDetailsServlet</servlet-class>
+    </servlet>
 
     <servlet-mapping>
         <servlet-name>UpdateUserServlet</servlet-name>
