@@ -14,6 +14,7 @@ import java.util.List;
 @WebServlet(name = "ProductListServlet" ,value = "/admin/productList")
 public class ProductListServlet extends HttpServlet {
     Connection con=null;
+
     @Override
     public void init() throws ServletException {
         con = (Connection) getServletContext().getAttribute("con");
