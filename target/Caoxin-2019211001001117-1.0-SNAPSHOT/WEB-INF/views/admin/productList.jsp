@@ -50,7 +50,7 @@
 					<c:forEach var="p" items="${productList}">
 						<tr>
 							<td class="cart_product">
-								<a href=""><img src="<%=basePath%>GetImg?id=${p.productId}"
+								<a href=""><img src="<%=basePath%>getImg?id=${p.productId}"
 								style="border: 1px solid #F7F7F0; height: 100px;width: 80px;"/></a>
 							</td>
 							<td class="cart_description">
