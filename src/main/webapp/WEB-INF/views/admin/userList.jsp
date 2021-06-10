@@ -50,7 +50,7 @@
 							<td class="cart_description">
 								<p>${row.username}</p>
 							</td>
-								<td class="cart_description">
+								<td class="cart_description"> 
 								<p>${row.password}</p>
 							</td>
 							<td class="cart_description">

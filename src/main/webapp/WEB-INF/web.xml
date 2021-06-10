@@ -158,6 +158,18 @@
         <servlet-name>UserListServlet</servlet-name>
         <servlet-class>com.Caoxin.controller.UserListServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>OrderServlet</servlet-name>
+        <servlet-class>com.Caoxin.controller.OrderServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AccountDetailsServlet</servlet-name>
+        <servlet-class>com.Caoxin.controller.AccountDetailsServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>OrderDetailsServlet</servlet-name>
+        <servlet-class>com.Caoxin.controller.OrderDetailsServlet</servlet-class>
+    </servlet>
 
     <servlet-mapping>
         <servlet-name>UpdateUserServlet</servlet-name>
