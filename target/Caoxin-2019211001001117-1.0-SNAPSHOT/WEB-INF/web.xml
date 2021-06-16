@@ -117,6 +117,22 @@
         <param-name>password</param-name>
         <param-value>admin123456789</param-value>
     </context-param>
+    <filter>
+        <filter-name>LoginFilter</filter-name>
+        <filter-class>com.lab2.LoginFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>LoginFilter</filter-name>
+        <url-pattern>/loginfilter</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>CaoxinFilter</filter-name>
+        <url-pattern>/lab2/welcome.jsp</url-pattern>
+    </filter-mapping>
+    <filter>
+        <filter-name>CaoxinFilter</filter-name>
+        <filter-class>com.lab2.CaoxinFilter</filter-class>
+    </filter>
     <servlet>
         <servlet-name>LogoutServlet</servlet-name>
         <servlet-class>com.Caoxin.controller.LogoutServlet</servlet-class>
