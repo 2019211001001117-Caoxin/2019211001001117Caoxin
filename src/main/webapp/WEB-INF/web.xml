@@ -186,6 +186,14 @@
         <servlet-name>OrderDetailsServlet</servlet-name>
         <servlet-class>com.Caoxin.controller.OrderDetailsServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AdminOrderListServlet</servlet-name>
+        <servlet-class>com.Caoxin.controller.AdminOrderListServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ContactUsServlet</servlet-name>
+        <servlet-class>com.Caoxin.controller.ContactUsServlet</servlet-class>
+    </servlet>
 
     <servlet-mapping>
         <servlet-name>UpdateUserServlet</servlet-name>
